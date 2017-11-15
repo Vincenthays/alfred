@@ -1,5 +1,4 @@
-import { Component } from 'react';
-import { Platform, StatusBar } from "react-native";
+import { Platform, StatusBar } from 'react-native';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 
 import Home from '../screens/Home';
