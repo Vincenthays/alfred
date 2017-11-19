@@ -76,14 +76,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
     },
     title: {
-        backgroundColor: 'black',
         color: 'white',
         padding: 5,
         color: 'yellow',
         fontSize: 40,
     },
     content: {
-        backgroundColor: 'black',
         color: 'white',
         padding: 5,
         color: 'yellow',
