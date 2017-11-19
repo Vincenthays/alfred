@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet  } from 'react-native';
 
-import firebase from '../service/database';
+import firebase from '../service/Database';
 
 import NotesCategorie from '../components/NotesCategorie';
 
