@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableHighlight } from 'react-native';
 
-export default class Note extends React.Component {
+export default class Note extends Component {
     
     getDate(date) {
         date = new Date(date);

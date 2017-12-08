@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { ScrollView, StyleSheet  } from 'react-native';
 
-import firebase from '../service/Database';
+import firebase from '../../service/Database';
 
-import NotesCategorie from '../components/NotesCategorie';
+import NotesCategorie from './NotesCategorie';
 
-export default class NoteList extends React.Component {
+export default class Notes extends Component {
 
     constructor(props) {
         super(props);
@@ -75,9 +75,9 @@ export default class NoteList extends React.Component {
                         title={categorie}
                         editNote={(note) => this.editNote(note)}
                         addNote={() => this.addNote(categorieId)}
-                        notes={this.state.notes.filter(note => {
-                            return note.categorieId == categorieId;
-                        })}
+                        notes={this.state.notes.filter(note => (
+                            note.categorieId == categorieId
+                        ))}
                     />
                 ))}
             </ScrollView >

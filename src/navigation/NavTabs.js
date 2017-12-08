@@ -2,9 +2,13 @@ import React from 'react';
 import { TabNavigator, TabBarBottom } from 'react-navigation';
 import { Ionicons } from '@expo/vector-icons';
 
-import Home from '../screens/Home';
+import Home from '../screens/home/Home';
+import Assistant from '../screens/assistant/Assistant';
 import NotesStack from './NotesStack';
-import About from '../screens/About';
+import Shopping from '../screens/shopping/Shopping';
+import Calendar from '../screens/calendar/Calendar';
+import Test from '../screens/test/Test';
+import Settings from '../screens/settings/Settings';
 
 export default NavTabs = TabNavigator({
     Home: {
@@ -15,16 +19,48 @@ export default NavTabs = TabNavigator({
             )
         }
     },
+    Assistant: {
+        screen: Assistant,
+        navigationOptions: {
+            tabBarIcon: ({ tintColor }) => (
+                <Ionicons name="md-color-wand" size={28} color={tintColor} />
+            )
+        }
+    },
     Notes: {
         screen: NotesStack,
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => (
-                <Ionicons name="ios-apps" size={28} color={tintColor} />
+                <Ionicons name="md-copy" size={28} color={tintColor} />
             )
         }
     },
-    About: {
-        screen: About,
+    Shopping: {
+        screen: Shopping,
+        navigationOptions: {
+            tabBarIcon: ({ tintColor }) => (
+                <Ionicons name="md-cart" size={28} color={tintColor} />
+            )
+        }
+    },
+    Calendar: {
+        screen: Calendar,
+        navigationOptions: {
+            tabBarIcon: ({ tintColor }) => (
+                <Ionicons name="md-calendar" size={28} color={tintColor} />
+            )
+        }
+    },
+    Test: {
+        screen: Test,
+        navigationOptions: {
+            tabBarIcon: ({ tintColor }) => (
+                <Ionicons name="md-bug" size={28} color={tintColor} />
+            )
+        }
+    },
+    Settings: {
+        screen: Settings,
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => (
                 <Ionicons name="md-settings" size={28} color={tintColor} />

@@ -11,10 +11,14 @@
         "icon": "./assets/icons/app-icon.png",
         "loading": {
             "icon": "./assets/icons/loading-icon.png",
-            "backgroundImage": "./assets/img/loading-bg.png"
+            "backgroundColor": "#000000"
         },
         "ios": {
-            "supportsTablet": true
+            "supportsTablet": true,
+            "bundleIdentifier": "com.chardonnay.alfred"
+        },
+        "android": {
+            "package": "com.chardonnay.alfred"
         }
     }
 }

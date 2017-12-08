@@ -2,26 +2,26 @@ import React from 'react';
 import { Platform, StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import NoteList from '../screens/NoteList';
-import NoteAdd from '../screens/NoteAdd';
-import NoteEdit from '../screens/NoteEdit';
+import Notes from '../screens/notes/Notes';
+import Add from '../screens/notes/Add';
+import Edit from '../screens/notes/Edit';
 
 export default NotesStack = StackNavigator({
     Notes: {
-        screen: NoteList,
+        screen: Notes,
         navigationOptions: {
             title: 'Notes',
             header: null
         }
     },
     Add: {
-        screen: NoteAdd,
+        screen: Add,
         navigationOptions: {
             title: 'Add'
         }
     },
     Edit: {
-        screen: NoteEdit,
+        screen: Edit,
         navigationOptions: {
             title: 'Edit'
         }

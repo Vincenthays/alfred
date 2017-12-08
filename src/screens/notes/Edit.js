@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, Text, Button, TextInput } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
-export default class NoteEdit extends React.Component {
+export default class Edit extends Component {
 
-    saveNoteAdd(note) {
+    saveNoteEdit(note) {
         const navigation = this.props.navigation;
 
         // change the state of the Notes screen
-        navigation.state.params.saveNoteAdd(note);
+        navigation.state.params.saveNoteEdit(note);
+
+        // return to the Notes screen
+        navigation.goBack();
+    }
+
+    deleteNoteEdit(note) {
+        const navigation = this.props.navigation;
+
+        // change the state of the Notes screen
+        navigation.state.params.deleteNoteEdit(note);
 
         // return to the Notes screen
         navigation.goBack();
@@ -17,11 +27,7 @@ export default class NoteEdit extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            note: {
-                title: '',
-                date: new Date(),
-                content: '',
-            }
+            note: this.props.navigation.state.params.note,
         }
     }
     
@@ -31,7 +37,6 @@ export default class NoteEdit extends React.Component {
             <View style={styles.container}>
                 <TextInput
                     style={styles.title}
-                    placeholder="Title"
                     onChangeText={(text) => this.setState(state => {
                         state.note.title = text;
                         return state;
@@ -40,7 +45,6 @@ export default class NoteEdit extends React.Component {
                 />
                 <TextInput
                     style={styles.content}
-                    placeholder="Content"
                     multiline={true}
                     autoGrow={true}
                     onChangeText={(text) => this.setState(state => {
@@ -49,13 +53,17 @@ export default class NoteEdit extends React.Component {
                     })}
                     value={note.content}
                 />
-                {(note.title != '' || note.content != '') && (
-                    <Button
-                        title="Save"
-                        color="black"
-                        onPress={() => this.saveNoteAdd(note)}
-                    />
-                )}
+                <Button
+                    title="Save modifications"
+                    color="black"
+                    onPress={() => this.saveNoteEdit(note)}
+                />
+                <View style={styles.space}></View>
+                <Button
+                    title="Delete note"
+                    color="red"
+                    onPress={() => this.deleteNoteEdit()}
+                />
             </View>
         );
     }
@@ -77,6 +85,9 @@ const styles = StyleSheet.create({
         color: 'white',
         padding: 5,
         color: 'yellow',
+    },
+    space: {
+        flex: 1,
     }
 });
 

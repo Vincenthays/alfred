@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 
 import Note from './Note';
 
-export default class NotesCategorie extends React.Component {
+export default class NotesCategorie extends Component {
 
 
     render() {

@@ -8,6 +8,7 @@ let config = {
     storageBucket: "alfred-e66d6.appspot.com",
     messagingSenderId: "398222058017"
 };
+
 firebase.initializeApp(config);
 
 export default firebase;

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Alert, View, StyleSheet, Text, Image, Button } from 'react-native';
+import React, { Component } from 'react';
+import { View, StyleSheet, Text } from 'react-native';
 
-export default class About extends React.Component {
+export default class Assistant extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>About</Text>
+                <Text style={styles.text}>Assistant</Text>
             </View>
         );
     }
