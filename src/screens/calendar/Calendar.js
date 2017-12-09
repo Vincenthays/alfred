@@ -48,9 +48,10 @@ export default class Calendar extends Component {
                     items={this.state.agendaItems}
                     // specify how each item should be rendered in agenda
                     renderItem={(note, firstItemInDay) => <CalendarItem note={note} firstItemInDay={firstItemInDay} />}
+                    // renderItem={(note, firstItemInDay) => <View />}
                     // specify how each date should be rendered. day can be undefined if the item is not first in that day.
-                    renderDay={(day, item) => <CalendarDay day={day} item={item} />}
-                    // renderDay={(day, item) => <View />}
+                    // renderDay={(day, note) => <CalendarDay note={note} />}
+                    renderDay={(day, item) => <View />}
                     // specify how empty date content with no items should be rendered
                     renderEmptyDate={() => <CalendarEmpty />}
                     // specify what should be rendered instead of ActivityIndicator

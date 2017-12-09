@@ -21,7 +21,6 @@ export default class Test extends Component {
                 title: 'New smart note',
                 body: 'test',
                 android: {
-                    icon: 'https://raw.githubusercontent.com/Vincenthays/alfred/master/assets/icons/app-icon.png',
                     color: 'black'
                 }
             })

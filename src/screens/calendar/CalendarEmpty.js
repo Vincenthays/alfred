@@ -15,12 +15,13 @@ export default class CalendarEmpty extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'black'
+        // backgroundColor: 'black'
     },
     text: {
         marginTop: 20,
-        color: 'yellow',
+        // color: 'yellow',
         fontSize: 30,
+        fontWeight: 'bold',
         textAlign: 'center',
     }
 });

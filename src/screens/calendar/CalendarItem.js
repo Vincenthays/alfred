@@ -16,12 +16,14 @@ export default class CalendarItem extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 5,
+        flexDirection: 'column',
         padding: 5,
+        paddingBottom: 10,
         backgroundColor: '#FFFCC1',
+        borderBottomWidth: 1,
+        borderBottomColor: '#BFBFBF',
     },
     title: {
-        flex: 1,
         fontSize: 20,
         fontWeight: 'bold',
     },
